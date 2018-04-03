@@ -1,0 +1,95 @@
+﻿@model IEnumerable<WardrobeProject.Models.Bottom>
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Bottoms</title>
+</head>
+<body>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                @Html.ActionLink("Wardrobe", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
+                    <li>@Html.ActionLink("Outfits", "Index", "Outfits")</li>
+                    <li>@Html.ActionLink("Tops", "Index", "Tops")</li>
+                    <li>@Html.ActionLink("Bottoms", "Index", "Bottoms")</li>
+                    <li>@Html.ActionLink("Shoes", "Index", "Shoes")</li>
+                    <li>@Html.ActionLink("Accessories", "Index", "Accessories")</li>
+
+                </ul>
+            </div>
+        </div>
+    </div>
+    <p>
+        @Html.ActionLink("Create New", "Create")
+    </p>
+    <table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Photo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Type)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Color)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Season)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Occasion)
+            </th>
+            <th></th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Name)
+                </td>
+                <td>
+                    <img style="width:100px;" src="@Html.DisplayFor(modelItem => item.Photo)" />
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Type)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Color)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Season)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Occasion)
+                </td>
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { id = item.BottomID }) |
+                    @Html.ActionLink("Details", "Details", new { id = item.BottomID }) |
+                    @Html.ActionLink("Delete", "Delete", new { id = item.BottomID })
+                </td>
+            </tr>
+        }
+
+    </table>
+</body>
+</html>

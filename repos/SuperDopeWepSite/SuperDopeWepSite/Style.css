@@ -1,0 +1,32 @@
+﻿p{
+    background-color:blue;
+    color:white;
+}
+
+.superhero {
+    font-family: Euphemia;
+}
+
+#page-title {
+    color: var(--primary-color); 
+    font-family: Aharoni;
+    font-size: 2rem;
+}
+
+section h1 {
+    background-color: red;
+}
+section {
+    background-image: radial-gradient(circle at center, red,blue);
+}
+:root {
+    --primary-color: red;
+    --secondary-color: blue;
+    --tertiary-color: yellow;
+}
+
+h1 {
+    background-color: var(--tertiary-color);
+    color: var(--primary-color);
+}
+

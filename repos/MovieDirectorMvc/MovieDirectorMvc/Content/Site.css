@@ -1,0 +1,83 @@
+﻿body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
+*/
+.dl-horizontal dt {
+    white-space: normal;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+.white{
+    height:50px;
+}
+.jumbotron {
+    color:black;
+    font:bolder;
+    background-image: url('../imagefolder/reel2.jpg');
+    background-size: cover;
+    border: 10px solid black;
+}
+.link-row {
+    height: 250px;
+    /*background-image: url('../imagefolder/reel.png');*/
+    background-size: cover;
+    border:7px solid Black;
+}
+.btn-default {
+    background-color:grey;
+    color:white;
+}
+.btn-rt {
+    background-color:red;
+    color: white
+
+}
+
+
+.movies-home {
+    height: auto;
+    color: black;
+    font-size: larger;
+    font: bolder 24px arial, black;
+    background-size: cover;
+    text-align: center;
+}
+
+
+.directors-home {
+    height: auto;
+    /*height: 300px;*/
+    color: black;
+    
+    font: bolder bolder 24px arial, black;
+    text-align: center;
+}
+.genres-home {
+    height: auto;
+    /*height: 325px;*/
+    color: black;
+    font: bolder 24px arial, black;
+    text-align: center;
+    /*text-justify: inter-word;*/
+}
+.directors-head {
+    background-image: url('../imagefolder/reel.png');
+    color: black;
+    font:bolder;
+    font-size:x-large;
+}

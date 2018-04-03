@@ -1,0 +1,38 @@
+﻿@model IEnumerable<BookShelf.Models.Book>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+
+<div class="row">
+    @foreach (var item in Model)
+    {
+        <div class="col-sm-6 col-md-4">
+            <div class="thumbnail">
+                <div class="caption">
+                    <h3>@Html.DisplayFor(modelItem => item.Title)</h3>
+                    <p> @Html.DisplayNameFor(model => model.Publisheddate) : @Html.DisplayFor(modelItem => item.Publisheddate) </p>
+                    <p> @Html.ActionLink("Details", "Details", new { id = item.BookID }) |</p>
+
+                 </div>
+             </div>
+          </div>
+     }  
+    </div>
+
+
+
+
+
+
+
+
+
+
+

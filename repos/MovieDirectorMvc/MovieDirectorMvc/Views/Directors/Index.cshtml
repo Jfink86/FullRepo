@@ -1,0 +1,45 @@
+﻿@model IEnumerable<MovieDirectorMvc.Models.Director>
+
+@{
+    ViewBag.Title = "Index";
+}
+     <div class="row directors-head">
+         <h1>Directors</h1>
+    </div>
+     <div class="row ">
+         <div class="col">
+             <iframe width="560" height="315" src="https://www.youtube.com/embed/1gev7vA3-a0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+         </div>
+         <div class="col">
+             <iframe width="560" height="315" src="https://www.youtube.com/embed/Jr8EI96JLZE" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+         </div>
+         <div class="col">
+             <iframe width="560" height="315" src="https://www.youtube.com/embed/qXJ2RRTO3Qc" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+         </div>
+     </div>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Name)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Name)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.DirectorId }) |
+            @Html.ActionLink("Details", "Details", new { id=item.DirectorId }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.DirectorId })
+        </td>
+    </tr>
+}
+
+</table>

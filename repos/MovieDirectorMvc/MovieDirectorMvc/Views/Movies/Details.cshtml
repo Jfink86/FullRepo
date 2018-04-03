@@ -1,0 +1,74 @@
+﻿@model MovieDirectorMvc.Models.Movie
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Movie</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Director.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Director.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Genre.Type)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Genre.Type)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Title)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Title)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ReleaseDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ReleaseDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.RTScore)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RTScore)<p><a class="btn-group-lg btn-rt" href="https://www.rottentomatoes.com/">Rotten Tomatoes &raquo;</a></p>
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Rating)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Rating)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.WonAward) <p><a href="https://www.oscars.org/oscars/ceremonies/2018" class="btn btn-primary btn-lg">Acadamy Awards &raquo;</a></p>
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.WonAward)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.MovieID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

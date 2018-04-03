@@ -1,0 +1,13 @@
+﻿.container {
+    display: grid;
+    grid-gap: 15px 20px;
+    grid-template-columns: 200px 200px 200px;
+    grid-template-rows: 100px 200px 200px;
+    margin: 2rem auto;
+    max-width: 1000px;
+    width: 90%;
+}
+.grid-item-1 {
+    grid-column-start: 1;
+    grid-column-end: 3; 
+}

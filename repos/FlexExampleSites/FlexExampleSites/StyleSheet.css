@@ -1,0 +1,38 @@
+﻿.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+.cards {
+    min-height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+    align-items:center;
+    justify-content:center;
+}
+.card1 {
+    flex: 0 0 250px
+}
+.card2 {
+    flex: 0 0 250px
+}
+.card3 {
+    flex: 0 0 250px
+}
+.row {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.row_cell {
+    
+    flex:1;
+}
+.row_cell--2 {
+    flex: 2;
+}
+.row_cell--3 {
+    flex:3
+}
